@@ -34,8 +34,8 @@ export default function Home() {
         {/* Contact */}
         <div className="border border-white/10 rounded-2xl px-8 py-6">
           <p className="text-xs font-medium uppercase tracking-widest text-white/30 mb-3">// Get In Touch</p>
-          <a href="mailto:contact@alvoratalent.com" className="block text-sm text-white/60 hover:text-white transition-colors">
-            contact@alvoratalent.com
+          <a href="mailto:hello@alvoratalent.com" className="block text-sm text-white/60 hover:text-white transition-colors">
+            hello@alvoratalent.com
           </a>
         </div>
 
