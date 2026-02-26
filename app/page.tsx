@@ -25,7 +25,7 @@ export default function Home() {
 
         {/* Summary */}
         <p className="text-white/50 text-base max-w-md leading-relaxed mb-3">
-          We represent a curated roster of creators across gaming, athletics, and adventure — connecting authentic talent with brands built to last.
+          We represent a curated roster of creators across gaming, athletics, and adventure, connecting authentic talent with brands built to last.
         </p>
         <p className="text-white/30 text-sm mb-12">
           Site under construction — something great is coming.
@@ -34,11 +34,8 @@ export default function Home() {
         {/* Contact */}
         <div className="border border-white/10 rounded-2xl px-8 py-6">
           <p className="text-xs font-medium uppercase tracking-widest text-white/30 mb-3">// Get In Touch</p>
-          <a href="mailto:logan@alvoratalent.com" className="block text-sm text-white/60 hover:text-white transition-colors mb-1.5">
-            logan@alvoratalent.com
-          </a>
-          <a href="mailto:matt@alvoratalent.com" className="block text-sm text-white/60 hover:text-white transition-colors">
-            matt@alvoratalent.com
+          <a href="mailto:contact@alvoratalent.com" className="block text-sm text-white/60 hover:text-white transition-colors">
+            contact@alvoratalent.com
           </a>
         </div>
 
