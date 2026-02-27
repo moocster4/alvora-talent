@@ -3,31 +3,36 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Services — Alvora Talent",
-  description: "Brand partnerships, campaign management, and long-term sponsorships with world-class creator-athletes.",
+  description: "Brand partnerships, campaign management, and long-term representation for world-class talent.",
 };
 
 export default function Services() {
   return (
-    <main className="pt-16">
+    <main className="bg-[#F6F6F4]">
+
       {/* Hero */}
-      <section className="py-24 px-6 bg-gray-900 text-white">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/40 mb-6">// Services</p>
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight max-w-2xl">
-            How we work with brands.
+      <section data-hero className="relative overflow-hidden bg-[#111111] pt-32 pb-20 px-8 flex flex-col justify-end">
+        <div className="absolute inset-0 opacity-[0.035]" style={{ backgroundImage: "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)", backgroundSize: "80px 80px", animation: "grid-drift 10s linear infinite" }} />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 55% 45% at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 100%)", animation: "wave-pulse 5s ease-in-out infinite" }} />
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
+          <p className="text-xs font-medium uppercase tracking-[0.25em] text-white/30 mb-8">
+            Services
+          </p>
+          <h1 className="text-6xl md:text-7xl font-semibold tracking-tight text-white leading-[1.02] max-w-3xl">
+            Full-service representation for serious talent.
           </h1>
         </div>
       </section>
 
-      {/* Main services */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="space-y-6">
+      {/* Services list */}
+      <section className="py-28 px-8 border-b border-[#E0E0DE]">
+        <div className="max-w-7xl mx-auto">
+          <div className="divide-y divide-[#E0E0DE]">
             {[
               {
-                number: "01",
+                num: "01",
                 title: "Brand Partnerships",
-                desc: "We match brands with the right creator based on audience alignment, content fit, and shared values. This isn't about reach alone — it's about finding a partner whose audience will actually care about what you're selling.",
+                desc: "We match brands with the right talent based on audience alignment, content fit, and shared values. This isn't about reach alone — it's about finding a partner whose audience will actually care about what you're building.",
                 details: [
                   "Audience demographic analysis",
                   "Brand-talent alignment assessment",
@@ -36,9 +41,9 @@ export default function Services() {
                 ],
               },
               {
-                number: "02",
+                num: "02",
                 title: "Campaign Management",
-                desc: "From initial brief to final deliverables, we manage the full campaign lifecycle so you don't have to chase anyone down. Our talent delivers on time, on brief, and at the quality level you expect.",
+                desc: "From initial brief to final deliverables, we manage the full campaign lifecycle. Our talent delivers on time, on brief, and at the quality level you expect.",
                 details: [
                   "Creative brief development",
                   "Content review and approval workflows",
@@ -47,48 +52,46 @@ export default function Services() {
                 ],
               },
               {
-                number: "03",
+                num: "03",
                 title: "Long-Term Sponsorships",
-                desc: "The brands our talent's audiences trust most are the ones they see consistently — season after season. We structure multi-year deals that grow in value as the relationship deepens.",
+                desc: "The brands audiences trust most are the ones they see consistently — season after season. We structure multi-year deals that grow in value as the relationship deepens.",
                 details: [
                   "Multi-year deal structuring",
-                  "Season and expedition tie-ins",
+                  "Season and event tie-ins",
                   "Milestone-based content calendars",
                   "Annual performance reviews",
                 ],
               },
               {
-                number: "04",
-                title: "Product Integration",
-                desc: "Our talent doesn't just mention products — they use them in the field. When Ryan Mitchell films a summit attempt with your gear, that's not an ad. That's a real-world proof of concept that your customers will remember.",
+                num: "04",
+                title: "Career Development",
+                desc: "We think beyond the next deal. Our talent relationships are built around long-term growth, positioning, and the kind of career moves that compound over time.",
                 details: [
-                  "Organic product use in content",
-                  "Expedition and event documentation",
-                  "Behind-the-scenes gear features",
-                  "Authentic testimonials",
+                  "Brand positioning strategy",
+                  "Platform and audience growth",
+                  "Opportunity vetting and sourcing",
+                  "Cross-category expansion",
                 ],
               },
             ].map((s) => (
-              <div key={s.number} className="border border-gray-100 rounded-2xl p-8 md:p-10">
-                <div className="grid md:grid-cols-3 gap-8">
-                  <div className="md:col-span-2">
-                    <div className="flex items-start gap-4 mb-4">
-                      <span className="text-xs font-mono text-gray-300 mt-1">{s.number}</span>
-                      <h2 className="text-2xl font-bold tracking-tight text-gray-900">{s.title}</h2>
-                    </div>
-                    <p className="text-gray-500 leading-relaxed ml-8">{s.desc}</p>
-                  </div>
-                  <div className="ml-8 md:ml-0">
-                    <p className="text-xs font-medium uppercase tracking-widest text-gray-400 mb-4">Includes</p>
-                    <ul className="space-y-2.5">
-                      {s.details.map((d) => (
-                        <li key={d} className="flex items-start gap-2.5 text-sm text-gray-600">
-                          <span className="text-gray-300 mt-0.5">—</span>
-                          {d}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+              <div key={s.num} className="py-16 grid md:grid-cols-12 gap-12">
+                <div className="md:col-span-1">
+                  <p className="text-xs font-mono text-[#111111]/20 mt-1">{s.num}</p>
+                </div>
+                <div className="md:col-span-5">
+                  <h2 className="text-2xl font-semibold text-[#111111] mb-4">{s.title}</h2>
+                  <p className="text-sm text-[#111111]/50 leading-relaxed">{s.desc}</p>
+                </div>
+                <div className="md:col-span-4 md:col-start-9">
+                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#111111]/30 mb-5">Includes</p>
+                  <ul className="space-y-3">
+                    {s.details.map((d) => (
+                      <li key={d} className="flex items-start gap-3 text-sm text-[#111111]/50">
+                        <span className="text-[#111111]/20 shrink-0">—</span>
+                        {d}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
@@ -96,24 +99,30 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Who it's for */}
-      <section className="py-24 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4">// Ideal Partners</p>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Who we work with best</h2>
+      {/* Ideal partners */}
+      <section className="py-28 px-8 border-b border-[#E0E0DE]">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-12 gap-12 mb-16">
+            <div className="md:col-span-3">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#111111]/40">
+                Ideal Partners
+              </p>
+            </div>
+            <div className="md:col-span-7">
+              <h2 className="text-4xl font-semibold tracking-tight text-[#111111]">Who we work with best</h2>
+            </div>
           </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-px bg-[#E0E0DE]">
             {[
               "Outdoor & adventure brands",
               "Athletic apparel & footwear",
               "Performance nutrition",
               "Wearable technology",
-              "Expedition gear",
+              "Gaming & esports brands",
               "Sports & fitness apps",
             ].map((cat) => (
-              <div key={cat} className="bg-white border border-gray-100 rounded-xl px-6 py-5">
-                <p className="text-sm font-medium text-gray-700">{cat}</p>
+              <div key={cat} className="bg-[#F6F6F4] px-10 py-8">
+                <p className="text-sm font-medium text-[#111111]/70">{cat}</p>
               </div>
             ))}
           </div>
@@ -121,23 +130,27 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 bg-gray-900 text-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/40 mb-6">// Let&apos;s Talk</p>
-          <h2 className="text-4xl font-bold tracking-tight mb-6">
-            Have a campaign in mind?
-          </h2>
-          <p className="text-white/60 text-lg mb-10">
-            Send us a brief or just an introduction — we respond to every inquiry.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-white text-gray-900 px-10 py-4 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Contact Us
-          </Link>
+      <section className="py-28 px-8 bg-[#111111]">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-end">
+          <div className="md:col-span-8">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/30 mb-8">
+              Let&apos;s Talk
+            </p>
+            <h2 className="text-5xl md:text-6xl font-semibold tracking-tight text-white leading-tight">
+              Have a campaign in mind?
+            </h2>
+          </div>
+          <div className="md:col-span-4 flex md:justify-end md:items-end">
+            <Link
+              href="/contact"
+              className="text-xs font-medium uppercase tracking-[0.2em] text-white border-b border-white/30 pb-0.5 hover:border-white transition-colors duration-200"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </section>
+
     </main>
   );
 }

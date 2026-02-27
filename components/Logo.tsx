@@ -1,65 +1,44 @@
 /**
- * Alvora Talent logo mark — a clean geometric "A" / mountain peak.
+ * Alvora Talent logo system.
+ * AT monogram: A's crossbar extends into the T — shared structural element.
  * Use `dark` prop for white version on dark backgrounds.
  */
 
-interface LogoMarkProps {
+interface Props {
   className?: string;
   dark?: boolean;
 }
 
-interface LogoProps {
-  className?: string;
-  dark?: boolean;
-  showWordmark?: boolean;
-}
-
-export function LogoMark({ className, dark = false }: LogoMarkProps) {
-  const color = dark ? "#ffffff" : "#0a0a0a";
+export function ATMonogram({ className, dark = false }: Props) {
+  const color = dark ? "#F6F6F4" : "#111111";
   return (
     <svg
       className={className}
-      viewBox="0 0 32 32"
+      viewBox="0 0 44 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      aria-label="Alvora Talent mark"
+      aria-label="AT"
     >
-      {/* Two legs of the A — meeting at a sharp apex */}
-      <path
-        d="M4 28 L16 4 L28 28"
-        stroke={color}
-        strokeWidth="2.5"
-        strokeLinecap="square"
-        strokeLinejoin="miter"
-        fill="none"
-      />
-      {/* Crossbar — extends 1px past each leg for a distinctive detail */}
-      <line
-        x1="7"
-        y1="20"
-        x2="25"
-        y2="20"
-        stroke={color}
-        strokeWidth="2.5"
-        strokeLinecap="square"
-      />
+      {/* A — left leg */}
+      <line x1="2" y1="28" x2="13" y2="2" stroke={color} strokeWidth="2" strokeLinecap="square" />
+      {/* A — right leg */}
+      <line x1="13" y1="2" x2="24" y2="28" stroke={color} strokeWidth="2" strokeLinecap="square" />
+      {/* Shared crossbar — A's crossbar extends rightward to become T's crossbar */}
+      <line x1="6" y1="19" x2="42" y2="19" stroke={color} strokeWidth="2" strokeLinecap="square" />
+      {/* T — stem, drops from midpoint of T's crossbar */}
+      <line x1="31" y1="19" x2="31" y2="28" stroke={color} strokeWidth="2" strokeLinecap="square" />
     </svg>
   );
 }
 
-export function Logo({ className, dark = false, showWordmark = true }: LogoProps) {
-  const textColor = dark ? "text-white" : "text-gray-900";
+export function Logo({ className, dark = false }: Props) {
+  const textColor = dark ? "text-[#F6F6F4]" : "text-[#111111]";
   return (
-    <span className={`inline-flex items-center gap-2.5 ${className ?? ""}`}>
-      <LogoMark className="w-7 h-7 shrink-0" dark={dark} />
-      {showWordmark && (
-        <span className={`font-semibold text-[15px] tracking-tight ${textColor}`}>
-          Alvora{" "}
-          <span className={`font-light ${dark ? "text-white/70" : "text-gray-500"}`}>
-            Talent
-          </span>
-        </span>
-      )}
+    <span className={`inline-flex items-center gap-3 ${className ?? ""}`}>
+      <ATMonogram className="w-8 h-auto shrink-0" dark={dark} />
+      <span className={`text-[15px] font-medium tracking-[0.12em] uppercase ${textColor}`}>
+        Alvora Talent
+      </span>
     </span>
   );
 }

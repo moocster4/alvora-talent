@@ -1,41 +1,36 @@
 import Link from "next/link";
-import { Logo } from "./Logo";
+import { ATMonogram } from "./Logo";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-100 bg-white">
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-          <div>
-            <Logo className="mb-3" />
-            <p className="text-sm text-gray-500 max-w-xs">
-              Representing world-class creators and athletes who are redefining what it means to build an audience.
+    <footer className="bg-[#F6F6F4] border-t border-[#E0E0DE]">
+      <div className="max-w-7xl mx-auto px-8 py-16">
+        <div className="grid md:grid-cols-12 gap-12 mb-16">
+          <div className="md:col-span-4">
+            <ATMonogram className="w-8 h-auto mb-4" />
+            <p className="text-sm text-[#111111]/40 max-w-xs leading-relaxed">
+              A modern management firm representing creators, athletes, and gamers.
             </p>
           </div>
-
-          <div className="flex gap-16">
-            <div>
-              <p className="text-xs font-medium uppercase tracking-widest text-gray-400 mb-4">Company</p>
-              <div className="flex flex-col gap-2.5">
-                <Link href="/about" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">About</Link>
-                <Link href="/services" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Services</Link>
-                <Link href="/contact" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Contact</Link>
-              </div>
+          <div className="md:col-span-2 md:col-start-7">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#111111]/30 mb-5">Company</p>
+            <div className="flex flex-col gap-3">
+              <Link href="/about" className="text-sm text-[#111111]/50 hover:text-[#111111] transition-colors duration-200">About</Link>
+              <Link href="/services" className="text-sm text-[#111111]/50 hover:text-[#111111] transition-colors duration-200">Services</Link>
+              <Link href="/contact" className="text-sm text-[#111111]/50 hover:text-[#111111] transition-colors duration-200">Contact</Link>
             </div>
-            <div>
-              <p className="text-xs font-medium uppercase tracking-widest text-gray-400 mb-4">Contact</p>
-              <div className="flex flex-col gap-2.5">
-                <a href="mailto:info@alvoratalent.com" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  info@alvoratalent.com
-                </a>
-              </div>
-            </div>
+          </div>
+          <div className="md:col-span-3">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#111111]/30 mb-5">Contact</p>
+            <a href="mailto:hello@alvoratalent.com" className="text-sm text-[#111111]/50 hover:text-[#111111] transition-colors duration-200">
+              hello@alvoratalent.com
+            </a>
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="text-xs text-gray-400">© {new Date().getFullYear()} Alvora Talent. All rights reserved.</p>
-          <p className="text-xs text-gray-400">alvoratalent.com</p>
+        <div className="pt-8 border-t border-[#E0E0DE] flex flex-col md:flex-row justify-between items-center gap-3">
+          <p className="text-xs text-[#111111]/30">© {new Date().getFullYear()} Alvora Talent. All rights reserved.</p>
+          <p className="text-xs text-[#111111]/30">alvoratalent.com</p>
         </div>
       </div>
     </footer>

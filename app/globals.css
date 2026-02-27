@@ -1,16 +1,35 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-space), ui-sans-serif, system-ui, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
+  --background: #F6F6F4;
+  --foreground: #111111;
+  --charcoal: #111111;
+  --offwhite: #F6F6F4;
+  --mid: #888888;
+  --border: #E0E0DE;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@keyframes grid-drift {
+  0%   { background-position: 0 0, 0 0; }
+  100% { background-position: 80px 80px, 80px 80px; }
+}
+
+@keyframes wave-pulse {
+  0%, 100% { opacity: 0; transform: scale(0.85); }
+  50%       { opacity: 1; transform: scale(1.15); }
 }

@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-space",
 });
 
 export const metadata: Metadata = {
   title: "Alvora Talent",
-  description: "A talent agency representing world-class creators and athletes.",
+  description: "A modern talent management firm representing creators, athletes, and gamers.",
   openGraph: {
     title: "Alvora Talent",
-    description: "A talent agency representing world-class creators and athletes.",
+    description: "A modern talent management firm representing creators, athletes, and gamers.",
     url: "https://alvoratalent.com",
     siteName: "Alvora Talent",
   },
@@ -25,8 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${spaceGrotesk.variable} font-sans antialiased`}>
+        <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
