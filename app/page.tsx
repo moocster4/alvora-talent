@@ -1,5 +1,3 @@
-import { LogoMark } from "@/components/Logo";
-
 export default function Home() {
   return (
     <main className="relative min-h-screen bg-gray-950 flex flex-col items-center justify-center px-6 text-center overflow-hidden">
@@ -13,9 +11,6 @@ export default function Home() {
       />
 
       <div className="relative z-10 flex flex-col items-center">
-        {/* Logo */}
-        <LogoMark className="w-10 h-10 mb-6 opacity-80" dark />
-
         <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/30 mb-3">
           // Talent Agency
         </p>
