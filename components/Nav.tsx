@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Logo } from "./Logo";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -10,10 +9,6 @@ export default function Nav() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="hover:opacity-70 transition-opacity">
-          <Logo />
-        </Link>
-
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
           <Link href="/about" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
